@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('assets/fonts/Inter-VariableFont_slnt\,wght.ttf')
+          format('truetype');
+}
+
+:root {
+
+  --clr-primary: hsl(0, 0%, 100%);
+  --clr-secondary: hsl(75, 94%, 57%);
+
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800:  hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
+
+
+  --ff-base: 'Inter', sans-serif;
+
+  --fw-small: 400;
+  --fw-regular: 600;
+  --fw-bold: 700;
+
+  --fs-400: 0.875rem;
+  --fs-600: 1.5rem;
+
+  --content-padding: 1.5rem;
+  --content-spacing-small: 0.5rem;
+  --content-spacing: 1rem;
+  --content-spacing-large: 1.7rem;
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-small);
+  font-size: var(--fs-400);
+  color: var(--clr-primary);
+  background-color: var(--clr-grey-900);
+
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1 {
+  overflow-wrap: break-word;
+}
+
+main{
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 80%;
+  max-width: 20.5rem;
+  display: grid;
+  gap: var(--content-spacing-large);
+  padding: var(--content-padding);
+
+  background-color: var(--clr-grey-800);
+  border-radius: 0.875rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card__image > img{
+  width: 5.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card__personal-info {
+  display: grid;
+  gap: var(--content-spacing-small)
+}
+
+.card__name {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-regular);
+}
+
+.card__location {
+  color: var(--clr-secondary);
+  font-weight: var(--fw-regular);
+}
+
+.card__social {
+  display: grid;
+  gap: var(--content-spacing);
+}
+
+.card__social__link {
+  background-color: var(--clr-grey-700);
+  padding-block: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: var(--fw-regular);
+  cursor: pointer;
+  padding-block: 0.875rem;
+}
+
+.card__social__link:is(:hover, :focus){
+  background: var(--clr-secondary);
+  color: var(--clr-grey-900);
+}
+
